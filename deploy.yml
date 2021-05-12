@@ -6,10 +6,10 @@
       docker_image:
         name: shivraj25/bidding_app_frontend
         source: pull
-    - name: Create default containers
-      docker_container:
-        name: bidding_app_frontend
-        image: shivraj25/bidding_app_frontend
-        state: present
-        ports:
-          - "3000:3000"
+    # - name: Create default containers
+    #   docker_container:
+    #     name: bidding_app_frontend
+    #     image: shivraj25/bidding_app_frontend
+    #     state: present
+    #     ports:
+    #       - "3000:3000"
