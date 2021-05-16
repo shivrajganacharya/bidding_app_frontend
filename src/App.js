@@ -48,7 +48,7 @@ const App = () => {
 
   return (
     <Router history={history}>
-      <div>
+      <div >
         <nav className="navbar navbar-expand navbar-dark bg-dark">
           <Link to={"/"} className="navbar-brand">
             ShifThat
@@ -131,7 +131,7 @@ const App = () => {
           )}
         </nav>
 
-        <div className="container mt-3">
+        <div className="container-fluid mt-3">
           <Switch>
             <Route exact path={["/", "/home"]} component={Home} />
             <Route exact path="/login" component={Login} />

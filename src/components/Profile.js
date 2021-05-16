@@ -3,6 +3,7 @@ import { Redirect } from 'react-router-dom';
 import { useSelector } from "react-redux";
 import UserItems from '../components/UserItems'
 import ShowItems from "./ShowItems";
+import "./profile.css"
 
 const Profile = () => {
   const { user: currentUser } = useSelector((state) => state.auth);
@@ -12,35 +13,47 @@ const Profile = () => {
   }
 
   return (
-    <div className="container">
+    <div className="container-fluid" style={{backgroundImage: 'url('+'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Ftransport-background&psig=AOvVaw2VlHNU6XwB3__T04DJFpEE&ust=1621230447265000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMiogKHAzfACFQAAAAAdAAAAABAD'+')', height: "300px", backgroundRepeat: "no-repeat"}}>
       <header className="jumbotron">
         <h3 >
           <strong style={{textTransform: "uppercase"}}>{currentUser.username}</strong> Profile
         </h3>
       </header>
-      {/* <p>
-        <strong>Token:</strong> {currentUser.accessToken.substring(0, 20)} ...{" "}
-        {currentUser.accessToken.substr(currentUser.accessToken.length - 20)}
-      </p>
-      <p>
-        <strong>Id:</strong> {currentUser.id}
-      </p>
-      <p>
-        <strong>Email:</strong> {currentUser.email}
-      </p>
-      <strong>Authorities:</strong>
-      <ul>
-        {currentUser.roles &&
-          currentUser.roles.map((role, index) => <li key={index}>{role}</li>)}
-      </ul> */}
+      <div className="col-md-12">
+        <div className='container-fluid home p-5'>
+        <div className="card card-container">
+        <img
+          src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
+          alt="profile-img"
+          className="profile-img-card"
+        />
 
-      <h2>Username : {currentUser.username} </h2><br></br>
-      <h2>Email : {currentUser.email} </h2><br></br>
-      <h2>Authorities:</h2>
-      <ul>
-        {currentUser.roles &&
-          currentUser.roles.map((role, index) => <h3><li key={index}>{role}</li></h3>)}
-      </ul>
+          <div className="form-group">
+            <label htmlFor="username">Username</label>
+            <div className="form-control">
+            {currentUser.username}
+            </div>
+          </div>
+          <div className="form-group">
+            <label htmlFor="username">Email</label>
+            <div className="form-control">
+            {currentUser.email}
+            </div>
+          </div>
+          <div className="form-group">
+            <label htmlFor="username">Authorities</label>
+            <div className="form-control">
+            <div>
+            {currentUser.roles &&
+            currentUser.roles.map((role, index) => <span key={index}>{role}</span>)}
+            </div>            
+            </div>
+          </div>
+        </div>
+        </div>
+   
+      </div>
+   
 
     </div>
     

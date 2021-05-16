@@ -1,9 +1,10 @@
-body {background-color: rgb(212, 210, 207);}
+body {
+  background-color: hsl(0, 9%, 98%);
+}
 
 .jumbotron {
   background-color: rgb(240, 240, 240);
 }
-
 
 label {
   display: block;

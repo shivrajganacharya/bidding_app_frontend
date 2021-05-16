@@ -68,7 +68,7 @@ const Login = (props) => {
 
   return (
     <div className="col-md-12">
-      <div className="card card-container">
+      <div className="card card-container ">
         <img
           src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
           alt="profile-img"
@@ -109,6 +109,12 @@ const Login = (props) => {
             </button>
           </div>
 
+          <div className="form-group">
+            <a className="btn btn-primary btn-block" href="/register" >
+             
+              <span>Signup</span>
+            </a>
+          </div>
           {message && (
             <div className="form-group">
               <div className="alert alert-danger" role="alert">
