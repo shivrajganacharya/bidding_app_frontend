@@ -29,7 +29,7 @@ const BoardModerator = () => {
   return (
     <div className="container">
       <header className="jumbotron">
-        <h3>{content}</h3>
+        <h3>All Advertisements</h3>
       </header>
       <div>
         <ShowItems url={`http://localhost:8085/api/getAllItems`} />

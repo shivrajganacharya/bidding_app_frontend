@@ -63,7 +63,7 @@ const App = () => {
             {showModeratorBoard && (
               <li className="nav-item">
                 <Link to={"/mod"} className="nav-link">
-                  Moderator Board
+                  All Advertisement
                 </Link>
               </li>
             )}
